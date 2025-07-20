@@ -59,3 +59,29 @@ jobs:
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: NowSecure.sarif
+Function 
+Import:
+https://api.etherscan.io/v2/api
+   ?chainid=1
+   &module=account
+   &action=addresstokenbalance
+   &address=0x1563F4EaD498EA931bb2CD2DbC3Ae2b8b516FBde
+   &page=1
+   &offset=100
+   &apikey=E4XQS66QJYPBM6ZPIUU3EH9B37NZB5XG7K
+
+const chains = [42161, 8453, 10, 534352, 81457]
+
+for (const chain of chains) {
+
+  // endpoint accepts one chain at a time, loop for all your chains
+  const balance = fetch(`https://api.etherscan.io/v2/api?
+     chainid=${chain}
+     &module=account
+     &action=balance
+     &address=0x2Ab2358979730D49A89E941109aEECc3394371ed
+     &tag=latest&apikey=E4XQS66QJYPBM6ZPIUU3EH9B37NZB5XG7K
+     
+}
+Function import 
+https://api.etherscan.io/v2/api ?chainid=1 &module=stats &action=tokensupply &contractaddress=0x1563F4EaD498EA931bb2CD2DbC3Ae2b8b516FBde &apikey=E4XQS66QJYPBM6ZPIUU3EH9B37NZB5XG7K
