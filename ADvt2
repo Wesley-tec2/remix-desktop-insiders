@@ -4,4 +4,5 @@ function import 0x15d4c048f83bd7e37d49ea4c83a07267ec4203da
 owner 0x2Ab2358979730D49A89E941109aEECc3394371ed 
 function getOwner ownership 0x2Ab2358979730D49A89E941109aEECc3394371ed 
 function getOwner owner 
-2000 option 
+function Other Settings: The EVM version used for compilation was "paris EvmVersion"
+function Optimization Enabled: Optimization was enabled during compilation with 1000 runs
