@@ -61,7 +61,7 @@ jobs:
           sarif_file: NowSecure.sarif
 Function 
 Import:
-https://api.etherscan.io/v2/api
+https://https://etherscan.io/myapikey_logs?apikey=E4XQS66QJYPBM6ZPIUU3EH9B37NZB5XG7K
    ?chainid=1
    &module=account
    &action=addresstokenbalance
@@ -79,7 +79,7 @@ for (const chain of chains) {
      chainid=${chain}
      &module=account
      &action=balance
-     &address=0x2Ab2358979730D49A89E941109aEECc3394371ed
+     &address=0x1563F4EaD498EA931bb2CD2DbC3Ae2b8b516FBde
      &tag=latest&apikey=E4XQS66QJYPBM6ZPIUU3EH9B37NZB5XG7K
      
 }
