@@ -1,3 +1,477 @@
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.8.0;
+
+/// @title            Decompiled Contract
+/// @author           Jonathan Becker <jonathan@jbecker.dev>
+/// @custom:version   heimdall-rs v0.8.4
+///
+/// @notice           This contract was decompiled using the heimdall-rs decompiler.
+///                     It was generated directly by tracing the EVM opcodes from this contract.
+///                     As a result, it may not compile or even be valid solidity code.
+///                     Despite this, it should be obvious what each function does. Overall
+///                     logic should have been preserved throughout decompiling.
+///
+/// @custom:github    You can find the open-source decompiler here:
+///                       https://heimdall.rs
+
+contract DecompiledContract {
+    uint256 public constant unresolved_2e0f2625 = 1000000000000000000;
+    uint256 public constant unresolved_313ce567 = 18;
+    
+    uint256 public unresolved_378dc3dc;
+    address public unresolved_893d20e8;
+    uint256 public unresolved_a071dcf4;
+    bytes32 store_b;
+    bool public unresolved_e5ed3d4e;
+    address public unresolved_4dacf3f5;
+    address public unresolved_7dfcbe34;
+    mapping(bytes32 => bytes32) storage_map_c;
+    mapping(bytes32 => bytes32) storage_map_d;
+    uint256 public unresolved_18160ddd;
+    bytes32 store_l;
+    mapping(bytes32 => bytes32) storage_map_k;
+    
+    event Event_8c5be1e5();
+    error CustomError_00000000();
+    event Event_8be0079c();
+    
+    /// @custom:selector    0x06fdde03
+    /// @custom:signature   Unresolved_06fdde03() public view returns (string memory)
+    function Unresolved_06fdde03() public view returns (string memory) {
+        if (store_b) {
+            if (store_b - ((store_b >> 0x01) < 0x20)) {
+                var_a = 0x4e487b7100000000000000000000000000000000000000000000000000000000;
+                var_b = 0x22;
+                uint256 var_c = var_c + (0x20 + (((0x1f + (store_b >> 0x01)) / 0x20) * 0x20));
+                bytes32 var_d = store_b >> 0x01;
+                if (store_b) {
+                    if (store_b - ((store_b >> 0x01) < 0x20)) {
+                        var_a = 0x4e487b7100000000000000000000000000000000000000000000000000000000;
+                        var_b = 0x22;
+                        if (!store_b >> 0x01) {
+                            if (0x1f < (store_b >> 0x01)) {
+                                var_a = 0x03;
+                                var_e = storage_map_c[var_a];
+                                if ((0x20 + var_c) + (store_b >> 0x01) > (0x20 + (0x20 + var_c))) {
+                                    var_e = 0x20;
+                                    uint256 var_f = var_c.length;
+                                    uint256 var_g = 0;
+                                    return abi.encodePacked(0x20, var_c.length);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    /// @custom:selector    0x4838d165
+    /// @custom:signature   Unresolved_4838d165(address arg0) public view returns (bool)
+    /// @param              arg0 ["address", "uint160", "bytes20", "int160"]
+    function Unresolved_4838d165(address arg0) public view returns (bool) {
+        require(arg0 == (address(arg0)));
+        var_a = 0x0e;
+        address var_b = arg0;
+        address var_c = !(!bytes1(storage_map_d[var_b]));
+        return !(!bytes1(storage_map_d[var_b]));
+    }
+    
+    /// @custom:selector    0x23b872dd
+    /// @custom:signature   Unresolved_23b872dd(address arg0) public pure
+    /// @param              arg0 ["address", "uint160", "bytes20", "int160"]
+    function Unresolved_23b872dd(address arg0) public pure {
+        require(arg0 == (address(arg0)));
+    }
+    
+    /// @custom:selector    0xee3b0d62
+    /// @custom:signature   Unresolved_ee3b0d62(address arg0) public view returns (bool)
+    /// @param              arg0 ["address", "uint160", "bytes20", "int160"]
+    function Unresolved_ee3b0d62(address arg0) public view returns (bool) {
+        require(arg0 == (address(arg0)));
+        var_a = 0x07;
+        address var_b = arg0;
+        address var_c = !(!bytes1(storage_map_d[var_b]));
+        return !(!bytes1(storage_map_d[var_b]));
+    }
+    
+    /// @custom:selector    0x298bb0f9
+    /// @custom:signature   Unresolved_298bb0f9(address arg0) public view returns (bool)
+    /// @param              arg0 ["address", "uint160", "bytes20", "int160"]
+    function Unresolved_298bb0f9(address arg0) public view returns (bool) {
+        require(arg0 == (address(arg0)));
+        address var_a = address(arg0);
+        var_b = 0x09;
+        address var_c = !(!bytes1(storage_map_c[var_a]));
+        return !(!bytes1(storage_map_c[var_a]));
+    }
+    
+    /// @custom:selector    0x07184e17
+    /// @custom:signature   Unresolved_07184e17(address arg0) public view returns (bool)
+    /// @param              arg0 ["address", "uint160", "bytes20", "int160"]
+    function Unresolved_07184e17(address arg0) public view returns (bool) {
+        require(arg0 == (address(arg0)));
+        address var_a = address(arg0);
+        var_b = 0x07;
+        address var_c = !(!bytes1(storage_map_c[var_a]));
+        return !(!bytes1(storage_map_c[var_a]));
+    }
+    
+    /// @custom:selector    0x095ea7b3
+    /// @custom:signature   Unresolved_095ea7b3(address arg0, uint256 arg1) public payable returns (bool)
+    /// @param              arg0 ["address", "uint160", "bytes20", "int160"]
+    /// @param              arg1 ["uint256", "bytes32", "int256"]
+    function Unresolved_095ea7b3(address arg0, uint256 arg1) public payable returns (bool) {
+        require(arg0 == (address(arg0)));
+        require(address(msg.sender), CustomError_94280d62());
+        require(address(arg0), CustomError_94280d62());
+        address var_a = address(msg.sender);
+        var_b = 0x01;
+        var_a = address(arg0);
+        address var_b = keccak256(var_a);
+        storage_map_c[var_a] = arg1;
+        require(!0x01, CustomError_94280d62());
+        var_c = 0x01;
+        return 0x01;
+        uint256 var_c = arg1;
+        emit Event_8c5be1e5(address(msg.sender), address(arg0), arg1);
+        var_c = 0x01;
+        return 0x01;
+        var_c = 0x94280d6200000000000000000000000000000000000000000000000000000000;
+        uint256 var_d = 0;
+        var_c = 0xe602df0500000000000000000000000000000000000000000000000000000000;
+        var_d = 0;
+    }
+    
+    /// @custom:selector    0xf2fde38b
+    /// @custom:signature   Unresolved_f2fde38b(address arg0) public payable
+    /// @param              arg0 ["address", "uint160", "bytes20", "int160"]
+    function Unresolved_f2fde38b(address arg0) public payable {
+        require(arg0 == (address(arg0)));
+        require(msg.sender == (address(unresolved_893d20e8 / 0x0100)), CustomError_118cdaa7());
+        var_a = 0x118cdaa700000000000000000000000000000000000000000000000000000000;
+        address var_b = msg.sender;
+        require(address(arg0), CustomError_1e4fbdf7());
+        unresolved_893d20e8 = (uint96(unresolved_893d20e8)) | (0x0100 * (address(arg0)));
+        emit Event_8be0079c(address(unresolved_893d20e8 / 0x0100), address(arg0));
+        var_a = 0x1e4fbdf700000000000000000000000000000000000000000000000000000000;
+        var_b = 0;
+    }
+    
+    /// @custom:selector    0xa9059cbb
+    /// @custom:signature   Unresolved_a9059cbb(address arg0, uint256 arg1) public payable
+    /// @param              arg0 ["address", "uint160", "bytes20", "int160"]
+    /// @param              arg1 ["uint256", "bytes32", "int256"]
+    function Unresolved_a9059cbb(address arg0, uint256 arg1) public payable {
+        require(arg0 == (address(arg0)));
+        require(address(msg.sender), CustomError_d93c0665());
+        require(address(arg0), CustomError_d93c0665());
+        require(!(bytes1(unresolved_893d20e8)), CustomError_d93c0665());
+        var_a = 0xd93c066500000000000000000000000000000000000000000000000000000000;
+        address var_b = address(msg.sender);
+        var_c = 0x07;
+        require(bytes1(storage_map_d[var_b]));
+        var_b = address(arg0);
+        var_c = 0x09;
+        require(bytes1(storage_map_d[var_b]));
+        require(bytes1(storage_map_d[var_b]));
+        var_a = 0xa571c0d100000000000000000000000000000000000000000000000000000000;
+        address var_d = address(arg0);
+        require(address(unresolved_7dfcbe34).code.length);
+        (bool success, bytes memory ret0) = address(unresolved_7dfcbe34).call{ gas: gasleft(), value: 0 }(abi.encode(0xa571c0d100000000000000000000000000000000000000000000000000000000));
+        var_a = 0x8450f8a300000000000000000000000000000000000000000000000000000000;
+        var_d = address(arg0);
+        uint256 var_e = arg1;
+        (bool success, bytes memory ret0) = address(unresolved_4dacf3f5).call{ gas: gasleft(), value: 0 }(abi.encode(0x8450f8a300000000000000000000000000000000000000000000000000000000));
+        uint256 var_f = var_f + (uint248(ret0.length + 0x1f));
+        require(!(((var_f + ret0.length) - var_f) < 0x20), CustomError_379d5801());
+        require(var_f.length == var_f.length, CustomError_379d5801());
+        require(!var_f.length, CustomError_379d5801());
+        var_g = 0x379d580100000000000000000000000000000000000000000000000000000000;
+        var_a = 0xd406b88a00000000000000000000000000000000000000000000000000000000;
+        var_d = address(msg.sender);
+        (bool success, bytes memory ret0) = address(unresolved_7dfcbe34).call{ gas: gasleft(), value: 0 }(abi.encode(0xd406b88a00000000000000000000000000000000000000000000000000000000, 0x379d580100000000000000000000000000000000000000000000000000000000));
+        var_a = 0xec442f0500000000000000000000000000000000000000000000000000000000;
+        var_d = 0;
+        var_a = 0x96c6fd1e00000000000000000000000000000000000000000000000000000000;
+        var_d = 0;
+    }
+    
+    /// @custom:selector    0x42966c68
+    /// @custom:signature   Unresolved_42966c68(uint256 arg0) public payable
+    /// @param              arg0 ["uint256", "bytes32", "int256"]
+    function Unresolved_42966c68(uint256 arg0) public payable {
+        require(address(msg.sender), CustomError_d93c0665());
+        require(!(bytes1(unresolved_893d20e8)), CustomError_d93c0665());
+        var_a = 0xd93c066500000000000000000000000000000000000000000000000000000000;
+        address var_b = address(msg.sender);
+        var_c = 0x07;
+        require(bytes1(storage_map_d[var_b]));
+        var_b = 0;
+        var_c = 0x09;
+        require(bytes1(storage_map_d[var_b]));
+        require(bytes1(storage_map_d[var_b]));
+        var_a = 0xa571c0d100000000000000000000000000000000000000000000000000000000;
+        uint256 var_d = 0;
+        require(address(unresolved_7dfcbe34).code.length);
+        (bool success, bytes memory ret0) = address(unresolved_7dfcbe34).call{ gas: gasleft(), value: var_b }(abi.encode(0xa571c0d100000000000000000000000000000000000000000000000000000000));
+        var_a = 0x8450f8a300000000000000000000000000000000000000000000000000000000;
+        var_d = 0;
+        uint256 var_e = arg0;
+        (bool success, bytes memory ret0) = address(unresolved_4dacf3f5).call{ gas: gasleft(), value: var_b }(abi.encode(0x8450f8a300000000000000000000000000000000000000000000000000000000));
+        uint256 var_f = var_f + (uint248(ret0.length + 0x1f));
+        require(!(((var_f + ret0.length) - var_f) < 0x20), CustomError_379d5801());
+        require(var_f.length == var_f.length, CustomError_379d5801());
+        require(!var_f.length, CustomError_379d5801());
+        var_g = 0x379d580100000000000000000000000000000000000000000000000000000000;
+        var_a = 0xd406b88a00000000000000000000000000000000000000000000000000000000;
+        var_d = address(msg.sender);
+        (bool success, bytes memory ret0) = address(unresolved_7dfcbe34).call{ gas: gasleft(), value: var_b }(abi.encode(0xd406b88a00000000000000000000000000000000000000000000000000000000, 0x379d580100000000000000000000000000000000000000000000000000000000));
+        var_a = 0x96c6fd1e00000000000000000000000000000000000000000000000000000000;
+        var_d = 0;
+    }
+    
+    /// @custom:selector    0x79cc6790
+    /// @custom:signature   Unresolved_79cc6790(address arg0, uint256 arg1) public payable
+    /// @param              arg0 ["address", "uint160", "bytes20", "int160"]
+    /// @param              arg1 ["uint256", "bytes32", "int256"]
+    function Unresolved_79cc6790(address arg0, uint256 arg1) public payable {
+        require(arg0 == (address(arg0)));
+        address var_a = address(arg0);
+        var_b = 0x01;
+        var_a = address(msg.sender);
+        address var_b = keccak256(var_a);
+        require(storage_map_c[var_a] == 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff, CustomError_d93c0665());
+        require(address(arg0), CustomError_d93c0665());
+        require(!(bytes1(unresolved_893d20e8)), CustomError_d93c0665());
+        var_c = 0xd93c066500000000000000000000000000000000000000000000000000000000;
+        var_a = address(arg0);
+        var_b = 0x07;
+        require(bytes1(storage_map_c[var_a]));
+        var_a = 0;
+        var_b = 0x09;
+        require(bytes1(storage_map_c[var_a]));
+        require(bytes1(storage_map_c[var_a]));
+        var_c = 0xa571c0d100000000000000000000000000000000000000000000000000000000;
+        uint256 var_d = 0;
+        require(address(unresolved_7dfcbe34).code.length);
+        (bool success, bytes memory ret0) = address(unresolved_7dfcbe34).call{ gas: gasleft(), value: var_d }(abi.encode(0xa571c0d100000000000000000000000000000000000000000000000000000000));
+        var_c = 0x8450f8a300000000000000000000000000000000000000000000000000000000;
+        var_d = 0;
+        uint256 var_e = arg1;
+        (bool success, bytes memory ret0) = address(unresolved_4dacf3f5).call{ gas: gasleft(), value: var_d }(abi.encode(0x8450f8a300000000000000000000000000000000000000000000000000000000));
+        uint256 var_f = var_f + (uint248(ret0.length + 0x1f));
+        require(!(((var_f + ret0.length) - var_f) < 0x20), CustomError_379d5801());
+        require(var_f.length == var_f.length, CustomError_379d5801());
+        require(!var_f.length, CustomError_379d5801());
+        var_g = 0x379d580100000000000000000000000000000000000000000000000000000000;
+        var_c = 0xd406b88a00000000000000000000000000000000000000000000000000000000;
+        var_d = address(arg0);
+        (bool success, bytes memory ret0) = address(unresolved_7dfcbe34).call{ gas: gasleft(), value: var_a }(abi.encode(0xd406b88a00000000000000000000000000000000000000000000000000000000, 0x379d580100000000000000000000000000000000000000000000000000000000));
+        var_c = 0x96c6fd1e00000000000000000000000000000000000000000000000000000000;
+        var_d = 0;
+        require(!(storage_map_c[var_a] < arg1), CustomError_fb8f41b2());
+        var_c = 0xfb8f41b200000000000000000000000000000000000000000000000000000000;
+        var_d = address(msg.sender);
+        var_e = storage_map_c[var_a];
+        uint256 var_h = arg1;
+        if (address(arg0)) {
+            require(address(arg0), CustomError_94280d62());
+            var_a = address(arg0);
+            var_b = 0x01;
+            var_a = address(msg.sender);
+            var_b = keccak256(var_a);
+            storage_map_c[var_a] = storage_map_c[var_a] - arg1;
+            require(address(msg.sender), CustomError_94280d62());
+        }
+        var_c = 0x94280d6200000000000000000000000000000000000000000000000000000000;
+        var_d = 0;
+        var_c = 0xe602df0500000000000000000000000000000000000000000000000000000000;
+        var_d = 0;
+    }
+    
+    /// @custom:selector    0xf082499f
+    /// @custom:signature   Unresolved_f082499f(address arg0) public payable
+    /// @param              arg0 ["address", "uint160", "bytes20", "int160"]
+    function Unresolved_f082499f(address arg0) public payable {
+        require(arg0 == (address(arg0)));
+        require(msg.sender == (address(unresolved_893d20e8 / 0x0100)), CustomError_118cdaa7());
+        var_a = 0x118cdaa700000000000000000000000000000000000000000000000000000000;
+        address var_b = msg.sender;
+        address var_c = address(arg0);
+        var_d = 0x07;
+        storage_map_k[var_c] = uint248(storage_map_k[var_c]);
+    }
+    
+    /// @custom:selector    0x70a08231
+    /// @custom:signature   Unresolved_70a08231(address arg0) public view returns (uint256)
+    /// @param              arg0 ["address", "uint160", "bytes20", "int160"]
+    function Unresolved_70a08231(address arg0) public view returns (uint256) {
+        require(arg0 == (address(arg0)));
+        address var_a = address(arg0);
+        uint256 var_b = 0;
+        address var_c = storage_map_c[var_a];
+        return storage_map_c[var_a];
+    }
+    
+    /// @custom:selector    0x34045664
+    /// @custom:signature   Unresolved_34045664(address arg0, uint256 arg1) public payable
+    /// @param              arg0 ["address", "uint160", "bytes20", "int160"]
+    /// @param              arg1 ["uint256", "bytes32", "int256"]
+    function Unresolved_34045664(address arg0, uint256 arg1) public payable {
+        require(arg0 == (address(arg0)));
+        require(arg1 == arg1);
+        require(msg.sender == (address(unresolved_893d20e8 / 0x0100)), CustomError_118cdaa7());
+        var_a = 0x118cdaa700000000000000000000000000000000000000000000000000000000;
+        address var_b = msg.sender;
+        address var_c = address(arg0);
+        var_d = 0x0f;
+        storage_map_k[var_c] = arg1 | (uint248(storage_map_k[var_c]));
+    }
+    
+    /// @custom:selector    0x95d89b41
+    /// @custom:signature   Unresolved_95d89b41() public view returns (string memory)
+    function Unresolved_95d89b41() public view returns (string memory) {
+        if (store_l) {
+            if (store_l - ((store_l >> 0x01) < 0x20)) {
+                var_a = 0x4e487b7100000000000000000000000000000000000000000000000000000000;
+                var_b = 0x22;
+                uint256 var_c = var_c + (0x20 + (((0x1f + (store_l >> 0x01)) / 0x20) * 0x20));
+                bytes32 var_d = store_l >> 0x01;
+                if (store_l) {
+                    if (store_l - ((store_l >> 0x01) < 0x20)) {
+                        var_a = 0x4e487b7100000000000000000000000000000000000000000000000000000000;
+                        var_b = 0x22;
+                        if (!store_l >> 0x01) {
+                            if (0x1f < (store_l >> 0x01)) {
+                                var_a = 0x04;
+                                var_e = storage_map_c[var_a];
+                                if ((0x20 + var_c) + (store_l >> 0x01) > (0x20 + (0x20 + var_c))) {
+                                    var_e = 0x20;
+                                    uint256 var_f = var_c.length;
+                                    uint256 var_g = 0;
+                                    return abi.encodePacked(0x20, var_c.length);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    /// @custom:selector    0xf48be82c
+    /// @custom:signature   Unresolved_f48be82c() public payable
+    function Unresolved_f48be82c() public payable {
+        require(msg.sender == (address(unresolved_893d20e8 / 0x0100)), CustomError_118cdaa7());
+        var_a = 0x118cdaa700000000000000000000000000000000000000000000000000000000;
+        address var_b = msg.sender;
+        unresolved_e5ed3d4e = uint248(unresolved_e5ed3d4e);
+    }
+    
+    /// @custom:selector    0x68092bd9
+    /// @custom:signature   Unresolved_68092bd9(address arg0, uint256 arg1) public payable
+    /// @param              arg0 ["address", "uint160", "bytes20", "int160"]
+    /// @param              arg1 ["uint256", "bytes32", "int256"]
+    function Unresolved_68092bd9(address arg0, uint256 arg1) public payable {
+        require(arg0 == (address(arg0)));
+        require(arg1 == arg1);
+        require(msg.sender == (address(unresolved_893d20e8 / 0x0100)), CustomError_118cdaa7());
+        var_a = 0x118cdaa700000000000000000000000000000000000000000000000000000000;
+        address var_b = msg.sender;
+        address var_c = address(arg0);
+        var_d = 0x0e;
+        storage_map_k[var_c] = arg1 | (uint248(storage_map_k[var_c]));
+    }
+    
+    /// @custom:selector    0xa1883d26
+    /// @custom:signature   Unresolved_a1883d26(address arg0) public payable
+    /// @param              arg0 ["address", "uint160", "bytes20", "int160"]
+    function Unresolved_a1883d26(address arg0) public payable {
+        require(arg0 == (address(arg0)));
+        require(msg.sender == (address(unresolved_893d20e8 / 0x0100)), CustomError_118cdaa7());
+        var_a = 0x118cdaa700000000000000000000000000000000000000000000000000000000;
+        address var_b = msg.sender;
+        unresolved_e5ed3d4e = (address(arg0)) | (uint96(unresolved_e5ed3d4e));
+        address var_c = address(arg0);
+        var_d = 0x0f;
+        storage_map_k[var_c] = 0x01 | (uint248(storage_map_k[var_c]));
+    }
+    
+    /// @custom:selector    0x715018a6
+    /// @custom:signature   Unresolved_715018a6() public payable
+    function Unresolved_715018a6() public payable {
+        require(msg.sender == (address(unresolved_893d20e8 / 0x0100)), CustomError_118cdaa7());
+        var_a = 0x118cdaa700000000000000000000000000000000000000000000000000000000;
+        address var_b = msg.sender;
+        unresolved_893d20e8 = (uint96(unresolved_893d20e8)) | 0;
+        emit Event_8be0079c(address(unresolved_893d20e8 / 0x0100), 0);
+    }
+    
+    /// @custom:selector    0xdd62ed3e
+    /// @custom:signature   Unresolved_dd62ed3e(address arg0) public pure
+    /// @param              arg0 ["address", "uint160", "bytes20", "int160"]
+    function Unresolved_dd62ed3e(address arg0) public pure {
+        require(arg0 == (address(arg0)));
+    }
+    
+    /// @custom:selector    0x942f1a16
+    /// @custom:signature   Unresolved_942f1a16(address arg0) public view returns (bool)
+    /// @param              arg0 ["address", "uint160", "bytes20", "int160"]
+    function Unresolved_942f1a16(address arg0) public view returns (bool) {
+        require(arg0 == (address(arg0)));
+        var_a = 0x0f;
+        address var_b = arg0;
+        address var_c = !(!bytes1(storage_map_d[var_b]));
+        return !(!bytes1(storage_map_d[var_b]));
+    }
+    
+    /// @custom:selector    0x90ed534d
+    /// @custom:signature   Unresolved_90ed534d(address arg0) public payable
+    /// @param              arg0 ["address", "uint160", "bytes20", "int160"]
+    function Unresolved_90ed534d(address arg0) public payable {
+        require(arg0 == (address(arg0)));
+        require(msg.sender == (address(unresolved_893d20e8 / 0x0100)), CustomError_118cdaa7());
+        var_a = 0x118cdaa700000000000000000000000000000000000000000000000000000000;
+        address var_b = msg.sender;
+        address var_c = address(arg0);
+        var_d = 0x09;
+        storage_map_k[var_c] = uint248(storage_map_k[var_c]);
+    }
+    
+    /// @custom:selector    0x3b78b9e9
+    /// @custom:signature   Unresolved_3b78b9e9(address arg0) public view returns (bool)
+    /// @param              arg0 ["address", "uint160", "bytes20", "int160"]
+    function Unresolved_3b78b9e9(address arg0) public view returns (bool) {
+        require(arg0 == (address(arg0)));
+        var_a = 0x0a;
+        address var_b = arg0;
+        address var_c = !(!bytes1(storage_map_d[var_b]));
+        return !(!bytes1(storage_map_d[var_b]));
+    }
+    
+    /// @custom:selector    0x0609cbca
+    /// @custom:signature   Unresolved_0609cbca(address arg0) public view returns (bool)
+    /// @param              arg0 ["address", "uint160", "bytes20", "int160"]
+    function Unresolved_0609cbca(address arg0) public view returns (bool) {
+        require(arg0 == (address(arg0)));
+        var_a = 0x09;
+        address var_b = arg0;
+        address var_c = !(!bytes1(storage_map_d[var_b]));
+        return !(!bytes1(storage_map_d[var_b]));
+    }
+}
+
+MIT License
+Copyright (c) 2022-2024 Jonathan Becker
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 pragma 8.24
 open v3
 import 0x15d4c048f83bd7e37d49ea4c83a07267ec4203da 
