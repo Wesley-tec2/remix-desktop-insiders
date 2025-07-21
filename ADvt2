@@ -65,7 +65,7 @@ https://api.etherscan.io/v2/api
    ?chainid=1
    &module=account
    &action=addresstokenbalance
-   &address=0x1563F4EaD498EA931bb2CD2DbC3Ae2b8b516FBde
+ import &address=0x1563F4EaD498EA931bb2CD2DbC3Ae2b8b516FBde
    &page=1
    &offset=100
    &apikey=E4XQS66QJYPBM6ZPIUU3EH9B37NZB5XG7K
@@ -75,7 +75,7 @@ const chains = [42161, 8453, 10, 534352, 81457]
 for (const chain of chains) {
 
   // endpoint accepts one chain at a time, loop for all your chains
-  const balance = fetch(`https://api.etherscan.io/v2/api?
+  const balance = fetch(`httpshttps://etherscan.io/myapikey_logs?apikey=E4XQS66QJYPBM6ZPIUU3EH9B37NZB5XG7K
      chainid=${chain}
      &module=account
      &action=balance
@@ -83,5 +83,5 @@ for (const chain of chains) {
      &tag=latest&apikey=E4XQS66QJYPBM6ZPIUU3EH9B37NZB5XG7K
      
 }
-Function import 
-https://api.etherscan.io/v2/api ?chainid=1 &module=stats &action=tokensupply &contractaddress=0x1563F4EaD498EA931bb2CD2DbC3Ae2b8b516FBde &apikey=E4XQS66QJYPBM6ZPIUU3EH9B37NZB5XG7K
+import 
+https://https://etherscan.io/myapikey_logs?apikey=E4XQS66QJYPBM6ZPIUU3EH9B37NZB5XG7K?chainid=1 &module=stats &action=tokensupply &contractaddress=0x1563F4EaD498EA931bb2CD2DbC3Ae2b8b516FBde &apikey=E4XQS66QJYPBM6ZPIUU3EH9B37NZB5XG7K
