@@ -1467,3 +1467,5 @@ contract ADvt is InitializableAdminUpgradeabilityProxy {}
 contract ADvt is InitializableAdminUpgradeabilityProxy {}
 
 contract ADvt is InitializableAdminUpgradeabilityProxy {}
+[dependent: import:
+https://github.com/Wesley-tec2/remix-desktop-insiders/blob/main/ADvt2]
