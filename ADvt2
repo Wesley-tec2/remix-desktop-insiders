@@ -479,7 +479,7 @@ owner 0x2Ab2358979730D49A89E941109aEECc3394371ed
 function getOwner ownership 0x2Ab2358979730D49A89E941109aEECc3394371ed 
 function getOwner owner 
 function Other Settings: The EVM version used for compilation was "paris EvmVersion"
-function Optimization Enabled: Optimization was enabled during compilation with 1000 runs
+function Optimization Enabled: Optimization was enabled during compilation with 2000 runs
 
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
