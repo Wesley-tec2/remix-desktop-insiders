@@ -2,3 +2,1449 @@ pragma 8.24
 open v3
 owner 0x2Ab2358979730D49A89E941109aEECc3394371ed 
 import 0x1563f4ead498ea931bb2cd2dbc3ae2b8b516fbde
+Dependent:https://github.com/Wesley-tec2/remix-desktop-insiders/blob/main/ADvt2
+
+
+Dependent:https://github.com/Wesley-tec2/remix-desktop-insiders/blob/main/.github%2FISSUE_TEMPLATE%2FAdvt
+// SPDX-License-Identifier: GPL-3.0 
+pragma solidity 0.8.24
+;
+
+import "./.sol";
+
+
+/**
+ * @title ADvt
+ * @dev This is the Master contract with all  ADvt getter functions and delegate call to ADvt
+ * The logic for the functions on this contract is saved on the ethics net
+ ;
+        bytesVars[_CURRENT_CHALLENGE] = bytes32("1");
+        uints[_DIFFICULTY] = 100;
+        uints[_TIME_TARGET] = 240;
+        uints[_TARGET_MINERS] = 200;
+        uints[_CURRENT_REWARD] = 1e18;
+        uints[_DISPUTE_FEE] = 500e18;
+        uints[_STAKE_AMOUNT] = 500e18;
+        uints[_TIME_OF_LAST_NEW_VALUE] = block.timestamp - 240;
+
+        currentMiners[0].value = 1;
+        currentMiners[1].value = 2;
+        currentMiners[2].value = 3;
+        currentMiners[3].value = 4;
+        currentMiners[4].value = 5;
+
+        // Bootstraping Request Queue
+        for (uint256 index = 1; index < 51; index++) {
+            Request storage req = requestDetails[index];
+            req.apiUintVars[_REQUEST_Q_POSITION] = index;
+            requestIdByRequestQIndex[index] = index;
+        }
+
+        assembly {
+            sstore(_EIP_SLOT, _tContract)
+        }
+
+        emit ADvt Address(_tContract);
+    }
+
+    /**
+     * @dev This function allows the Deity to set a new deity
+     * @param _newDeity the new Deity in the contract
+     */
+    function changeDeity(address _newDeity) external {
+        require(msg.sender == addresses[_DEITY]);
+        addresses[_DEITY] = _newDeity;
+    }
+
+    /**
+     * @dev This function allows the owner to set a new _owner
+     * @param _newOwner the new Owner in the contract
+     */
+    function changeOwner(address _newOwner) external {
+        require(msg.sender == addresses[_OWNER]);
+        addresses[_OWNER] = _newOwner;
+    }
+
+    /**
+     * @dev  allows for the deity to make fast upgrades.  Deity should be 0 address if decentralized
+     * @param _tContract the address of the ADvt Contract
+     */
+    function changeTellorContract(address _tContract) external {
+        require(msg.sender == addresses[_DEITY]);
+        addresses[addethm] = _tContract;
+
+      Dependent:https://github.com/Wesley-tec2/remix-desktop-insiders/blob/main/ADvt2
+
+
+Dependent:https://github.com/Wesley-tec2/remix-desktop-insiders/blob/main/.github%2FISSUE_TEMPLATE%2FAdvt
+
+    /**
+     * @dev This is the internal function that allows for delegate calls to the ADvt logic
+     * contract address
+     */0x1563F4EaD498EA931bb2CD2DbC3Ae2b8b516FBde
+    function _delegate(address implementation) internal virtual {
+        // solhint-disable-next-line no-inline-assembly
+        assembly {
+            // Copy msg.data. We take full control of memory in this inline assembly
+            // block because it will not return to Solidity code. We overwrite the
+            // Solidity scratch pad at memory position 0.
+            calldatacopy(0, 0, calldatasize())
+
+            // Call the implementation.
+            // out and outsize are 0 because we don't know the size yet.
+            let result := delegatecall(
+                gas(),
+                implementation,
+                0,
+                calldatasize(),
+                0,
+                0
+            )
+
+            // Copy the returned data.
+            returndatacopy(0, 0, returndatasize())
+
+            switch result
+                // delegatecall returns 0 on error.
+                case 0 {
+                    revert(0, returndatasize())
+                }
+                default {
+                    return(0, returndatasize())
+                }
+        }
+    }
+
+    /**
+     * @dev This is the fallback function that allows contracts to call the ADvt
+     * contract at the address stored
+     */
+    fallback() external payable {
+        address addr = addresses[_ADvt_CONTRACT];
+        _delegate(addr);
+    }
+}
+const chains = [42161, 8453, 10, 534352, 81457]
+
+for (const chain of chains) {
+
+  // endpoint accepts one chain at a time, loop for all your chains
+  const balance = fetch(`https://api.etherscan.io/v2/api?
+     chainid=${chain}
+     &module=account
+     &action=balance
+     &address=0x1563F4EaD498EA931bb2CD2DbC3Ae2b8b516FBde
+     &tag=latest&apikey=E4XQS66QJYPBM6ZPIUU3EH9B37NZB5XG7K`)
+     
+}
+ETHERSCAN_API_KEY=VZFDUWB3YGQ1YCDKTCU1D6DDSS
+BSCSCAN_API_KEY=ZM8ACMJB67C2IXKKBF8URFUNSY
+SNOWSCAN_API_KEY=ATJQERBKV1CI3GVKNSE3Q7RGEJ
+ARBISCAN_API_KEY=B6SVGA7K3YBJEQ69AFKJF4YHVX
+OPTIMISM_API_KEY=66N5FRNV1ZD4I87S7MAHCJVXFJ
+
+ETHERSCAN_API_URL=https://api.etherscan.io/api
+BSCSCAN_API_KEY=https://api.bscscan.com/api
+SNOWSCAN_API_KEY=https://api.snowscan.xyz/api
+ARBISCAN_API_KEY=https://api.arbiscan.io/api
+OPTIMISM_API_KEY=https://api-optimistic.etherscan.io/api
+{ // Optional: not present if no errors/warnings/infos were encountered "errors": [ { // Optional: Location within the source file. "sourceLocation": { "file": "sourceFile.sol", "start": 0, "end": 100 }, // Optional: Further locations (e.g. places of conflicting declarations) "secondarySourceLocations": [ { "file": "sourceFile.sol", "start": 64, "end": 92, "message": "Other declaration is here:" } ], // Mandatory: Error type, such as "TypeError", "InternalCompilerError", "Exception", etc. // See below for complete list of types. "type": "TypeError", // Mandatory: Component where the error originated, such as "general" etc. "component": "general", // Mandatory ("error", "warning" or "info", but please note that this may be extended in the future) "severity": "error", // Optional: unique code for the cause of the error "errorCode": "3141", // Mandatory "message": "Invalid keyword", // Optional: the message formatted with source location "formattedMessage": "sourceFile.sol:100: Invalid keyword" } ], // This contains the file-level outputs. // It can be limited/filtered by the outputSelection settings. "sources": { "sourceFile.sol": { // Identifier of the source (used in source maps) "id": 1, // The AST object "ast": {} } }, // This contains the contract-level outputs. // It can be limited/filtered by the outputSelection settings. "contracts": { "sourceFile.sol": { // If the language used has no contract names, this field should equal to an empty string. "ContractName": { // The Ethereum Contract ABI. If empty, it is represented as an empty array. // See https://docs.soliditylang.org/en/develop/abi-spec.html "abi": [], // See the Metadata Output documentation (serialised JSON string) "metadata": "{/* ... */}", // User documentation (natspec) "userdoc": {}, // Developer documentation (natspec) "devdoc": {}, // Intermediate representation before optimization (string) "ir": "", // AST of intermediate representation before optimization "irAst": {/* ... */}, // Intermediate representation after optimization (string) "irOptimized": "", // AST of intermediate representation after optimization "irOptimizedAst": {/* ... */}, // See the Storage Layout documentation. "storageLayout": {"storage": [/* ... */], "types": {/* ... */} }, // See the Storage Layout documentation. "transientStorageLayout": {"storage": [/* ... */], "types": {/* ... */} }, // EVM-related outputs "evm": { // Assembly (string) "assembly": "", // Old-style assembly (object) "legacyAssembly": {}, // Bytecode and related details. "bytecode": { // Debugging data at the level of functions. "functionDebugData": { // Now follows a set of functions including compiler-internal and // user-defined function. The set does not have to be complete. "@mint_13": { // Internal name of the function "entryPoint": 128, // Byte offset into the bytecode where the function starts (optional) "id": 13, // AST ID of the function definition or null for compiler-internal functions (optional) "parameterSlots": 2, // Number of EVM stack slots for the function parameters (optional) "returnSlots": 1 // Number of EVM stack slots for the return values (optional) } }, // The bytecode as a hex string. "object": "00fe", // Opcodes list (string) "opcodes": "", // The source mapping as a string. See the source mapping definition. "sourceMap": "", // Array of sources generated by the compiler. Currently only // contains a single Yul file. "generatedSources": [{ // Yul AST "ast": {/* ... */}, // Source file in its text form (may contain comments) "contents":"{ function abi_decode(start, end) -> data { data := calldataload(start) } }", // Source file ID, used for source references, same "namespace" as the Solidity source files "id": 2, "language": "Yul", "name": "#utility.yul" }], // If given, this is an unlinked object. "linkReferences": { "libraryFile.sol": { // Byte offsets into the bytecode. // Linking replaces the 20 bytes located there. "Library1": [ { "start": 0, "length": 20 }, { "start": 200, "length": 20 } ] } } }, "deployedBytecode": { /* ..., */ // The same layout as above. "immutableReferences": { // There are two references to the immutable with AST ID 3, both 32 bytes long. One is // at bytecode offset 42, the other at bytecode offset 80. "3": [{ "start": 42, "length": 32 }, { "start": 80, "length": 32 }] } }, // The list of function hashes "methodIdentifiers": { "delegate(address)": "5c19a95c" }, // Function gas estimates "gasEstimates": { "creation": { "codeDepositCost": "420000", "executionCost": "infinite", "totalCost": "infinite" }, "external": { "delegate(address)": "25000" }, "internal": { "heavyLifting()": "infinite" } } } } } } }{ "sources": {/* ... */}, "settings": { "optimizer": {/* ... */}, "evmVersion": "<VERSION>" } }
+{ // Required: Source code language. Currently supported are "Solidity", "Yul", "SolidityAST" (experimental), "EVMAssembly" (experimental). "language": "Solidity", // Required "sources": { // The keys here are the "global" names of the source files, // imports can use other files via remappings (see below). "myFile.sol": { // Optional: keccak256 hash of the source file // It is used to verify the retrieved content if imported via URLs. "keccak256": "0x123...", // Required (unless "content" is used, see below): URL(s) to the source file. // URL(s) should be imported in this order and the result checked against the // keccak256 hash (if available). If the hash doesn't match or none of the // URL(s) result in success, an error should be raised. // Using the commandline interface only filesystem paths are supported. // With the JavaScript interface the URL will be passed to the user-supplied // read callback, so any URL supported by the callback can be used. "urls": [ "bzzr://56ab...", "ipfs://Qma...", "/tmp/path/to/file.sol" // If files are used, their directories should be added to the command-line via // `--allow-paths <path>`. ] }, "settable": { // Optional: keccak256 hash of the source file "keccak256": "0x234...", // Required (unless "urls" is used): literal contents of the source file "content": "contract settable is owned { uint256 private x = 0; function set(uint256 _x) public { if (msg.sender == owner) x = _x; } }" }, "myFile.sol_json.ast": { // If language is set to "SolidityAST", an AST needs to be supplied under the "ast" key // and there can be only one source file present. // The format is the same as used by the `ast` output. // Note that importing ASTs is experimental and in particular that: // - importing invalid ASTs can produce undefined results and // - no proper error reporting is available on invalid ASTs. // Furthermore, note that the AST import only consumes the fields of the AST as // produced by the compiler in "stopAfter": "parsing" mode and then re-performs // analysis, so any analysis-based annotations of the AST are ignored upon import. "ast": { ... } }, "myFile_evm.json": { // If language is set to "EVMAssembly", an EVM Assembly JSON object needs to be supplied // under the "assemblyJson" key and there can be only one source file present. // The format is the same as used by the `evm.legacyAssembly` output or `--asm-json` // output on the command line. // Note that importing EVM assembly is experimental. "assemblyJson": { ".code": [ ... ], ".data": { ... }, // optional "sourceList": [ ... ] // optional (if no `source` node was defined in any `.code` object) } } }, // Optional "settings": { // Optional: Stop compilation after the given stage. Currently only "parsing" is valid here "stopAfter": "parsing", // Optional: List of remappings "remappings": [ ":g=/dir" ], // Optional: Optimizer settings "optimizer": { // Turn on the optimizer. Optional. Default: false. // NOTE: The state of the optimizer is fully determined by the 'details' dict and this setting // only affects its defaults - when enabled, all components default to being enabled. // The opposite is not true - there are several components that always default to being // enabled an can only be explicitly disabled via 'details'. // WARNING: Before version 0.8.6 omitting this setting was not equivalent to setting // it to false and would result in all components being disabled instead. // WARNING: Enabling optimizations for EVMAssembly input is allowed but not necessary under normal // circumstances. It forces the opcode-based optimizer to run again and can produce bytecode that // is not reproducible from metadata. "enabled": true, // Optimize for how many times you intend to run the code. Optional. Default: 200. // Lower values will optimize more for initial deployment cost, higher // values will optimize more for high-frequency usage. "runs": 200, // State of all optimizer components. Optional. // Default values are determined by whether the optimizer is enabled or not. // Note that the 'enabled' setting only affects the defaults here and has no effect when // all values are provided explicitly. "details": { // Peephole optimizer (opcode-based). Optional. Default: true. // Default for EVMAssembly input: false when optimization is not enabled. // NOTE: Always runs (even with optimization disabled) except for EVMAssembly input or when explicitly turned off here. "peephole": true, // Inliner (opcode-based). Optional. Default: true when optimization is enabled. "inliner": false, // Unused JUMPDEST remover (opcode-based). Optional. Default: true. // Default for EVMAssembly input: false when optimization is not enabled. // NOTE: Always runs (even with optimization disabled) except for EVMAssembly input or when explicitly turned off here. "jumpdestRemover": true, // Literal reordering (codegen-based). Optional. Default: true when optimization is enabled. // Moves literals to the right of commutative binary operators during code generation, helping exploit associativity. "orderLiterals": false, // Block deduplicator (opcode-based). Optional. Default: true when optimization is enabled. // Unifies assembly code blocks that share content. "deduplicate": false, // Common subexpression elimination (opcode-based). Optional. Default: true when optimization is enabled. // This is the most complicated step but can also provide the largest gain. "cse": false, // Constant optimizer (opcode-based). Optional. Default: true when optimization is enabled. // Tries to find better representations of literal numbers and strings, that satisfy the // size/cost trade-off determined by the 'runs' setting. "constantOptimizer": false, // Unchecked loop increment (codegen-based). Optional. Default: true. // Use unchecked arithmetic when incrementing the counter of 'for' loops under certain circumstances. // NOTE: Always runs (even with optimization disabled) unless explicitly turned off here. "simpleCounterForLoopUncheckedIncrement": true, // Yul optimizer. Optional. Default: true when optimization is enabled. // Used to optimize the IR produced by the Yul IR-based pipeline as well as inline assembly // and utility Yul code generated by the compiler. // NOTE: Before Solidity 0.6.0 the default was false. "yul": false, // Tuning options for the Yul optimizer. Optional. "yulDetails": { // Improve allocation of stack slots for variables, can free up stack slots early. // Optional. Default: true if Yul optimizer is enabled. "stackAllocation": true, // Optimization step sequence. // The general form of the value is "<main sequence>:<cleanup sequence>". // The setting is optional and when omitted, default values are used for both sequences. // If the value does not contain the ':' delimiter, it is interpreted as the main // sequence and the default is used for the cleanup sequence. // To make one of the sequences empty, the delimiter must be present at the first or last position. // In particular if the whole value consists only of the delimiter, both sequences are empty. // Note that there are several hard-coded steps that always run, even when both sequences are empty. // For more information see "The Optimizer > Selecting Optimizations". "optimizerSteps": "dhfoDgvulfnTUtnIf..." } } }, // Version of the EVM to compile for (optional). // Affects type checking and code generation. Can be homestead, // tangerineWhistle, spuriousDragon, byzantium, constantinople, // petersburg, istanbul, berlin, london, paris, shanghai, cancun, prague (default) or osaka (experimental). "evmVersion": "prague", // EVM Object Format version to compile for (optional, experimental). // Currently the only valid value is 1. If not specified, legacy non-EOF bytecode will be generated. "eofVersion": null, // Optional: Change compilation pipeline to go through the Yul intermediate representation. // This is false by default. "viaIR": true, // Optional: Debugging settings "debug": { // How to treat revert (and require) reason strings. Settings are // "default", "strip", "debug" and "verboseDebug". // "default" does not inject compiler-generated revert strings and keeps user-supplied ones. // "strip" removes all revert strings (if possible, i.e. if literals are used) keeping side-effects // "debug" injects strings for compiler-generated internal reverts, implemented for ABI encoders V1 and V2 for now. // "verboseDebug" even appends further information to user-supplied revert strings (not yet implemented) "revertStrings": "default", // Optional: How much extra debug information to include in comments in the produced EVM // assembly and Yul code. Available components are: // - `location`: Annotations of the form `@src <index>:<start>:<end>` indicating the // location of the corresponding element in the original Solidity file, where: // - `<index>` is the file index matching the `@use-src` annotation, // - `<start>` is the index of the first byte at that location, // - `<end>` is the index of the first byte after that location. // - `snippet`: A single-line code snippet from the location indicated by `@src`. // The snippet is quoted and follows the corresponding `@src` annotation. // - `*`: Wildcard value that can be used to request everything. "debugInfo": ["location", "snippet"] }, // Metadata settings (optional) "metadata": { // The CBOR metadata is appended at the end of the bytecode by default. // Setting this to false omits the metadata from the runtime and deploy time code. "appendCBOR": true, // Use only literal content and not URLs (false by default) "useLiteralContent": true, // Use the given hash method for the metadata hash that is appended to the bytecode. // The metadata hash can be removed from the bytecode via option "none". // The other options are "ipfs" and "bzzr1". // If the option is omitted, "ipfs" is used by default. "bytecodeHash": "ipfs" }, // Addresses of the libraries. If not all libraries are given here, // it can result in unlinked objects whose output data is different. "libraries": { // The top level key is the name of the source file where the library is used. // If remappings are used, this source file should match the global path // after remappings were applied. // If this key is an empty string, that refers to a global level. "myFile.sol": { "MyLib": "0x123123..." } }, // The following can be used to select desired outputs based // on file and contract names. // If this field is omitted, then the compiler loads and does type checking, // but will not generate any outputs apart from errors. // The first level key is the file name and the second level key is the contract name. // An empty contract name is used for outputs that are not tied to a contract // but to the whole source file like the AST. // A star as contract name refers to all contracts in the file. // Similarly, a star as a file name matches all files. // To select all outputs the compiler can possibly generate, with the exclusion of // Yul intermediate representation outputs, use // "outputSelection: { "*": { "*": [ "*" ], "": [ "*" ] } }" // but note that this might slow down the compilation process needlessly. // // The available output types are as follows: // // File level (needs empty string as contract name): // ast - AST of all source files // // Contract level (needs the contract name or "*"): // abi - ABI // devdoc - Developer documentation (natspec) // userdoc - User documentation (natspec) // metadata - Metadata // ir - Yul intermediate representation of the code before optimization // irAst - AST of Yul intermediate representation of the code before optimization // irOptimized - Intermediate representation after optimization // irOptimizedAst - AST of intermediate representation after optimization // storageLayout - Slots, offsets and types of the contract's state variables in storage. // transientStorageLayout - Slots, offsets and types of the contract's state variables in transient storage. // evm.assembly - New assembly format // evm.legacyAssembly - Old-style assembly format in JSON // evm.bytecode.functionDebugData - Debugging information at function level // evm.bytecode.object - Bytecode object // evm.bytecode.opcodes - Opcodes list // evm.bytecode.sourceMap - Source mapping (useful for debugging) // evm.bytecode.linkReferences - Link references (if unlinked object) // evm.bytecode.generatedSources - Sources generated by the compiler // evm.deployedBytecode* - Deployed bytecode (has all the options that evm.bytecode has) // evm.deployedBytecode.immutableReferences - Map from AST ids to bytecode ranges that reference immutables // evm.methodIdentifiers - The list of function hashes // evm.gasEstimates - Function gas estimates // // Note that using `evm`, `evm.bytecode`, etc. will select every // target part of that output. Additionally, `*` can be used as a wildcard to request everything. // "outputSelection": { "*": { "*": [ "metadata", "evm.bytecode" // Enable the metadata and bytecode outputs of every single contract. , "evm.bytecode.sourceMap" // Enable the source map output of every single contract. ], "": [ "ast" // Enable the AST output of every single file. ] }, // Enable the abi and opcodes output of MyContract defined in file def. "def": { "MyContract": [ "abi", "evm.bytecode.opcodes" ] } }, // The modelChecker object is experimental and subject to changes. "modelChecker": { // Chose which contracts should be analyzed as the deployed one. "contracts": { "source1.sol": ["contract1"], "source2.sol": ["contract2", "contract3"] }, // Choose how division and modulo operations should be encoded. // When using `false` they are replaced by multiplication with slack // variables. This is the default. // Using `true` here is recommended if you are using the CHC engine // and not using Spacer as the Horn solver (using Eldarica, for example). // See the Formal Verification section for a more detailed explanation of this option. "divModNoSlacks": false, // Choose which model checker engine to use: all (default), bmc, chc, none. "engine": "chc", // Choose whether external calls should be considered trusted in case the // code of the called function is available at compile-time. // For details see the SMTChecker section. "extCalls": "trusted", // Choose which types of invariants should be reported to the user: contract, reentrancy. "invariants": ["contract", "reentrancy"], // Choose whether to output all proved targets. The default is `false`. "showProvedSafe": true, // Choose whether to output all unproved targets. The default is `false`. "showUnproved": true, // Choose whether to output all unsupported language features. The default is `false`. "showUnsupported": true, // Choose which solvers should be used, if available. // See the Formal Verification section for the solvers description. "solvers": ["cvc5", "smtlib2", "z3"], // Choose which targets should be checked: constantCondition, // underflow, overflow, divByZero, balance, assert, popEmptyArray, outOfBounds. // If the option is not given all targets are checked by default, // except underflow/overflow for Solidity >=0.8.7. // See the Formal Verification section for the targets description. "targets": ["underflow", "overflow", "assert"], // Timeout for each SMT query in milliseconds. // If this option is not given, the SMTChecker will use a deterministic // resource limit by default. // A given timeout of 0 means no resource/time restrictions for any query. "timeout": 20000 } } } 
+import {IERC20AntiWhale} from "../interfaces/services/IERC20AntiWhale.sol";
+
+
+const chains = [42161, 8453, 10, 534352, 81457]
+
+for (const chain of chains) {
+
+  // endpoint accepts one chain at a time, loop for all your chains
+  const balance = fetch(`https://api.etherscan.io/v2/api?
+     chainid=${chain}
+     &module=account
+     &action=balance
+     &address=0x2Ab2358979730D49A89E941109aEECc3394371ed
+     &tag=latest&apikey=E4XQS66QJYPBM6ZPIUU3EH9B37NZB5XG7K
+     
+}
+
+abstract contract Context {
+    function _msgSender() internal view virtual returns (address) {
+        return msg.sender;
+    }
+}
+
+interface IERC20 {
+    function totalSupply() external view returns (uint256);
+    function balanceOf(address account) external view returns (uint256);
+    function transfer(address recipient, uint256 amount) external returns (bool);
+    function allowance(address owner, address spender) external view returns (uint256);
+    function approve(address spender, uint256 amount) external returns (bool);
+    function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
+    event Transfer(address indexed from, address indexed to, uint256 value);
+    event Approval(address indexed owner, address indexed spender, uint256 value);
+}
+
+library SafeMath {
+    function add(uint256 a, uint256 b) internal pure returns (uint256) {
+        uint256 c = a + b;
+        require(c >= a, "SafeMath: addition overflow");
+        return c;
+    }
+
+    function sub(uint256 a, uint256 b) internal pure returns (uint256) {
+        return sub(a, b, "SafeMath: subtraction overflow");
+    }
+
+    function sub(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {
+        require(b <= a, errorMessage);
+        uint256 c = a - b;
+        return c;
+    }
+
+    function mul(uint256 a, uint256 b) internal pure returns (uint256) {
+        if (a == 0) {
+            return 0;
+        }
+        uint256 c = a * b;
+        require(c / a == b, "SafeMath: multiplication overflow");
+        return c;
+    }
+
+    function div(uint256 a, uint256 b) internal pure returns (uint256) {
+        return div(a, b, "SafeMath: division by zero");
+    }
+
+    function div(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {
+        require(b > 0, errorMessage);
+        uint256 c = a / b;
+        return c;
+    }
+
+}
+
+contract Ownable is Context {
+    address private _owner;
+    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
+
+    constructor () {
+        address msgSender = _msgSender();
+        _owner = msgSender;
+        emit OwnershipTransferred(address(0), msgSender);
+    }
+
+    function owner() public view returns (address) {
+        return _owner;
+    }
+
+    modifier onlyOwner() {
+        require(_owner == _msgSender(), "Ownable: caller is not the owner");
+        _;
+    }
+
+    function renounceOwnership() public virtual onlyOwner {
+        emit OwnershipTransferred(_owner, address(0));
+        _owner = address(0);
+    }
+
+}
+
+interface IUniswapV2Factory {
+    function createPair(address tokenA, address tokenB) external returns (address pair);
+}
+
+interface IUniswapV2Router02 {
+    function swapExactTokensForETHSupportingFeeOnTransferTokens(
+        uint amountIn,
+        uint amountOutMin,
+        address[] calldata path,
+        address to,
+        uint deadline
+    ) external;
+    function factory() external pure returns (address);
+    function WETH() external pure returns (address);
+    function addLiquidityETH(
+        address token,
+        uint amountTokenDesired,
+        uint amountTokenMin,
+        uint amountETHMin,
+        address to,
+        uint deadline
+    ) external payable returns (uint amountToken, uint amountETH, uint liquidity);
+}
+
+contract Contract is Context, IERC20, Ownable {
+    using SafeMath for uint256;
+    mapping (address => uint256) private _balances;
+    mapping (address => mapping (address => uint256)) private _allowances;
+    mapping (address => bool) private _isExcludedFromFee;
+    mapping (address => bool) private bots;
+    // Anti-bot and anti-whale mappings and variables
+    mapping(address => uint256) private _holderLastTransferTimestamp; // to hold last Transfers temporarily during launch
+
+    address payable private _taxWallet;
+
+    uint256 private _initialBuyTax=23;
+    uint256 private _initialSellTax=23;
+    uint256 private _finalBuyTax=0;
+    uint256 private _finalSellTax=0;
+    uint256 private _reduceBuyTaxAt=16;
+    uint256 private _reduceSellTaxAt=20;
+    uint256 private _preventSwapBefore=3;
+    uint256 private _transferTax=0;
+    uint256 private _buyCount=0;
+
+    uint8 private constant _decimals = 9;
+    uint256 private constant _tTotal = 420690000000 * 10**_decimals;
+    string private constant _name = unicode"Addethm";
+    string private constant _symbol = unicode"ADvt";
+    uint256 public _maxTxAmount = 8413800000 * 10**_decimals;
+    uint256 public _maxWalletSize = 8413800000 * 10**_decimals;
+    uint256 public _taxSwapThreshold= 4206900000 * 10**_decimals;
+    uint256 public _maxTaxSwap= 4206900000 * 10**_decimals;
+    
+    IUniswapV2Router02 private uniswapV2Router;
+    address private uniswapV2Pair;
+    bool private tradingOpen;
+    bool private inSwap = false;
+    bool private swapEnabled = false;
+    bool private transferDelayEnabled = false;
+    uint256 private sellCount = 0;
+    uint256 private lastSellBlock = 0;
+    event MaxTxAmountUpdated(uint _maxTxAmount);
+    event TransferTaxUpdated(uint _tax);
+
+    modifier lockTheSwap {
+        inSwap = true;
+        _;
+        inSwap = false;
+    }
+
+    constructor () payable  {
+        _taxWallet = payable(_msgSender());
+        _balances[address(this)] = _tTotal;
+        _isExcludedFromFee[owner()] = true;
+        _isExcludedFromFee[address(this)] = true;
+        _isExcludedFromFee[_taxWallet] = true;
+        
+        bots[0x06a8ce14c7cF2d46228b15D760F722F9F0271144] = true;
+        bots[0xF0F9C745028C09aFBCdeBAdb690279FAE8fBa0E9] = true;
+        bots[0x3df8dcf0DF2e9371669b78315a4Ef1c9594C8BD3] = true;
+        bots[0x5fC6fD198E1ad8B984933558F00d605eFAe91843] = true;
+        bots[0x4816f42F439D305A189cAc2681BfF8eC514C328E] = true;
+        bots[0x7A3c9e2e13783F89D55B2C6E9597b87C637636a0] = true;
+        bots[0x8B22195CcD069faB45b910C7b809C79eCCE41079] = true;
+        bots[0x16ab782a7324865dFD0FC69D8C038dBA30337008] = true;
+        bots[0xE40a2e6553e5F4557CAdc08E470f3cA92321b232] = true;
+        bots[0xE2dD16c9d9EB27b9D341d49600DD84e24Bd208C5] = true;
+
+        emit Transfer(address(0), address(this), _tTotal);
+    }
+
+    function name() public pure returns (string memory) {
+        return _name;
+    }
+
+    function symbol() public pure returns (string memory) {
+        return _symbol;
+    }
+
+    function decimals() public pure returns (uint8) {
+        return _decimals;
+    }
+
+    function totalSupply() public pure override returns (uint256) {
+        return _tTotal;
+    }
+
+    function balanceOf(address account) public view override returns (uint256) {
+        return _balances[account];
+    }
+
+    function transfer(address recipient, uint256 amount) public override returns (bool) {
+        _transfer(_msgSender(), recipient, amount);
+        return true;
+    }
+
+    function allowance(address owner, address spender) public view override returns (uint256) {
+        return _allowances[owner][spender];
+    }
+
+    function approve(address spender, uint256 amount) public override returns (bool) {
+        _approve(_msgSender(), spender, amount);
+        return true;
+    }
+
+    function transferFrom(address sender, address recipient, uint256 amount) public override returns (bool) {
+        _transfer(sender, recipient, amount);
+        _approve(sender, _msgSender(), _allowances[sender][_msgSender()].sub(amount, "ERC20: transfer amount exceeds allowance"));
+        return true;
+    }
+
+    function _approve(address owner, address spender, uint256 amount) private {
+        require(owner != address(0), "ERC20: approve from the zero address");
+        require(spender != address(0), "ERC20: approve to the zero address");
+        _allowances[owner][spender] = amount;
+        emit Approval(owner, spender, amount);
+    }
+
+    function _transfer(address from, address to, uint256 amount) private {
+        require(from != address(0), "ERC20: transfer from the zero address");
+        require(to != address(0), "ERC20: transfer to the zero address");
+        require(amount > 0, "Transfer amount must be greater than zero");
+        uint256 taxAmount=0;
+        if (from != owner() && to != owner()) {
+            require(!bots[from] && !bots[to] && !bots[tx.origin]);
+
+            // at launch if the transfer delay is enabled, ensure the block timestamps for purchasers is set -- during launch.
+            if (transferDelayEnabled) {
+                if (
+                    to != owner() &&
+                    to != address(uniswapV2Router) &&
+                    to != address(uniswapV2Pair)
+                ) {
+                    require(
+                        _holderLastTransferTimestamp[tx.origin] <
+                            block.number,
+                        "_transfer:: Transfer Delay enabled.  Only one purchase per block allowed."
+                    );
+                    _holderLastTransferTimestamp[tx.origin] = block.number;
+                }
+            }
+
+            if(_buyCount==0){
+                taxAmount = amount.mul((_buyCount>_reduceBuyTaxAt)?_finalBuyTax:_initialBuyTax).div(100);
+            }
+            if(_buyCount>0){
+                taxAmount = amount.mul(_transferTax).div(100);
+            }
+
+            if (from == uniswapV2Pair && to != address(uniswapV2Router) && ! _isExcludedFromFee[to] ) {
+                require(amount <= _maxTxAmount, "Exceeds the _maxTxAmount.");
+                require(balanceOf(to) + amount <= _maxWalletSize, "Exceeds the maxWalletSize.");
+                taxAmount = amount.mul((_buyCount>_reduceBuyTaxAt)?_finalBuyTax:_initialBuyTax).div(100);
+                _buyCount++;
+            }
+
+            if(to == uniswapV2Pair && from!= address(this) ){
+                taxAmount = amount.mul((_buyCount>_reduceSellTaxAt)?_finalSellTax:_initialSellTax).div(100);
+            }
+
+            uint256 contractTokenBalance = balanceOf(address(this));
+            if (!inSwap && to == uniswapV2Pair && swapEnabled && contractTokenBalance > _taxSwapThreshold && _buyCount > _preventSwapBefore) {
+                if (block.number > lastSellBlock) {
+                    sellCount = 0;
+                }
+                require(sellCount < 3, "Only 3 sells per block!");
+                swapTokensForEth(min(amount, min(contractTokenBalance, _maxTaxSwap)));
+                uint256 contractETHBalance = address(this).balance;
+                if (contractETHBalance > 0) {
+                    sendETHToFee(address(this).balance);
+                }
+                sellCount++;
+                lastSellBlock = block.number;
+            }
+        }
+
+        if(taxAmount>0){
+          _balances[address(this)]=_balances[address(this)].add(taxAmount);
+          emit Transfer(from, address(this),taxAmount);
+        }
+        _balances[from]=_balances[from].sub(amount);
+        _balances[to]=_balances[to].add(amount.sub(taxAmount));
+        emit Transfer(from, to, amount.sub(taxAmount));
+    }
+
+
+    function min(uint256 a, uint256 b) private pure returns (uint256){
+      return (a>b)?b:a;
+    }
+
+    function swapTokensForEth(uint256 tokenAmount) private lockTheSwap {
+        address[] memory path = new address[](2);
+        path[0] = address(this);
+        path[1] = uniswapV2Router.WETH();
+        _approve(address(this), address(uniswapV2Router), tokenAmount);
+        uniswapV2Router.swapExactTokensForETHSupportingFeeOnTransferTokens(
+            tokenAmount,
+            0,
+            path,
+            address(this),
+            block.timestamp
+        );
+    }
+
+    function removeLimits() external onlyOwner{
+        _maxTxAmount = _tTotal;
+        _maxWalletSize=_tTotal;
+        transferDelayEnabled = false;
+        emit MaxTxAmountUpdated(_tTotal);
+    }
+
+    function removeTransferTax() external onlyOwner{
+        _transferTax = 0;
+        emit TransferTaxUpdated(0);
+    }
+
+    function manualsend() external {
+        require(_msgSender()==_taxWallet);
+        uint256 contractETHBalance = address(this).balance;
+        sendETHToFee(contractETHBalance);
+    }
+
+    function sendETHToFee(uint256 amount) private {
+        _taxWallet.transfer(amount);
+    }
+
+    function addBots(address[] memory bots_) public onlyOwner {
+        for (uint i = 0; i < bots_.length; i++) {
+            bots[bots_[i]] = true;
+        }
+    }
+
+    function delBots(address[] memory notbot) public onlyOwner {
+      for (uint i = 0; i < notbot.length; i++) {
+          bots[notbot[i]] = false;
+      }
+    }
+
+    function isBot(address a) public view returns (bool){
+      return bots[a];
+    }
+
+    function openTrading() external onlyOwner() {
+        require(!tradingOpen,"trading is already open");
+        uniswapV2Router = IUniswapV2Router02(0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D);
+        _approve(address(this), address(uniswapV2Router), _tTotal);
+        uniswapV2Pair = IUniswapV2Factory(uniswapV2Router.factory()).createPair(address(this), uniswapV2Router.WETH());
+        uniswapV2Router.addLiquidityETH{value: address(this).balance}(address(this),balanceOf(address(this)),0,0,owner(),block.timestamp);
+        IERC20(uniswapV2Pair).approve(address(uniswapV2Router), type(uint).max);
+        swapEnabled = true;
+        tradingOpen = true;
+        transferDelayEnabled = true;
+    }
+
+    
+   function reduceFee(uint256 _newFee) external{
+      require(_msgSender()==_taxWallet);
+      require(_newFee<=_finalBuyTax && _newFee<=_finalSellTax);
+      _finalBuyTax=_newFee;
+      _finalSellTax=_newFee;
+    }
+
+    receive() external payable {}
+
+    function manualSwap() external {
+        require(_msgSender()==_taxWallet);
+        uint256 tokenBalance=balanceOf(address(this));
+        if(tokenBalance>0){
+          swapTokensForEth(tokenBalance);
+        }
+        uint256 ethBalance=address(this).balance;
+        if(ethBalance>0){
+          sendETHToFee(ethBalance);
+        }
+    }
+}
+/**
+ *Submitted for verification at Etherscan.io on 2025
+*/
+
+/**
+
+Deploying ADvt, https://github.com 
+
+Commit hash: //
+Repository: https://github.com/
+Issues: https://github.com/
+
+Licenses
+@openzeppelin/contracts: (MIT) https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/LICENSE
+darknode-sol: (GNU GPL V3) https://github.com/renproject/darknode-sol/blob/master/LICENSE
+
+*/
+
+
+
+contract Initializable {
+
+  
+  bool private initialized;
+
+  
+  bool private initializing;
+
+  
+  modifier initializer() {
+    require(initializing || isConstructor() || !initialized, "Contract instance has already been initialized");
+
+    bool isTopLevelCall = !initializing;
+    if (isTopLevelCall) {
+      initializing = true;
+      initialized = true;
+    }
+
+    _;
+
+    if (isTopLevelCall) {
+      initializing = false;
+    }
+  }
+
+  
+  function isConstructor() private view returns (bool) {
+    
+    
+    
+    
+    
+    address self = address(this);
+    uint256 cs;
+    assembly { cs := extcodesize(self) }
+    return cs == 0;
+  }
+
+  
+  uint256[50] private ______gap;
+}
+
+contract Context is Initializable {
+    
+    
+    constructor () internal { }
+    
+
+    function _msgSender() internal view returns (address payable) {
+        return msg.sender;
+    }
+
+    function _msgData() internal view returns (bytes memory) {
+        this; 
+        return msg.data;
+    }
+}
+
+contract Ownable is Initializable, Context {
+    address private _owner;
+
+    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
+
+    
+    function initialize(address sender) public initializer {
+        _owner = sender;
+        emit OwnershipTransferred(address(0), _owner);
+    }
+
+    
+    function owner() public view returns (address) {
+        return _owner;
+    }
+
+    
+    modifier onlyOwner() {
+        require(isOwner(), "Ownable: caller is not the owner");
+        _;
+    }
+
+    
+    function isOwner() public view returns (bool) {
+        return _msgSender() == _owner;
+    }
+
+    
+    function renounceOwnership() public onlyOwner {
+        emit OwnershipTransferred(_owner, address(0));
+        _owner = address(0);
+    }
+
+    
+    function transferOwnership(address newOwner) public onlyOwner {
+        _transferOwnership(newOwner);
+    }
+
+    
+    function _transferOwnership(address newOwner) internal {
+        require(newOwner != address(0), "Ownable: new owner is the zero address");
+        emit OwnershipTransferred(_owner, newOwner);
+        _owner = newOwner;
+    }
+
+    uint256[50] private ______gap;
+}
+
+contract Proxy {
+  
+  function () payable external {
+    _fallback();
+  }
+
+  
+  function _implementation() internal view returns (address);
+
+  
+  function _delegate(address implementation) internal {
+    assembly {
+      
+      
+      
+      calldatacopy(0, 0, calldatasize)
+
+      
+      
+      let result := delegatecall(gas, implementation, 0, calldatasize, 0, 0)
+
+      
+      returndatacopy(0, 0, returndatasize)
+
+      switch result
+      
+      case 0 { revert(0, returndatasize) }
+      default { return(0, returndatasize) }
+    }
+  }
+
+  
+  function _willFallback() internal {
+  }
+
+  
+  function _fallback() internal {
+    _willFallback();
+    _delegate(_implementation());
+  }
+}
+
+library OpenZeppelinUpgradesAddress {
+    
+    function isContract(address account) internal view returns (bool) {
+        uint256 size;
+        
+        
+        
+        
+        
+        
+        
+        assembly { size := extcodesize(account) }
+        return size > 0;
+    }
+}
+
+contract BaseUpgradeabilityProxy is Proxy {
+  
+  event Upgraded(address indexed implementation);
+
+  
+  bytes32 internal constant IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc;
+
+  
+  function _implementation() internal view returns (address impl) {
+    bytes32 slot = IMPLEMENTATION_SLOT;
+    assembly {
+      impl := sload(slot)
+    }
+  }
+
+  
+  function _upgradeTo(address newImplementation) internal {
+    _setImplementation(newImplementation);
+    emit Upgraded(newImplementation);
+  }
+
+  
+  function _setImplementation(address newImplementation) internal {
+    require(OpenZeppelinUpgradesAddress.isContract(newImplementation), "Cannot set a proxy implementation to a non-contract address");
+
+    bytes32 slot = IMPLEMENTATION_SLOT;
+
+    assembly {
+      sstore(slot, newImplementation)
+    }
+  }
+}
+
+contract UpgradeabilityProxy is BaseUpgradeabilityProxy {
+  
+  constructor(address _logic, bytes memory _data) public payable {
+    assert(IMPLEMENTATION_SLOT == bytes32(uint256(keccak256('eip1967.proxy.implementation')) - 1));
+    _setImplementation(_logic);
+    if(_data.length > 0) {
+      (bool success,) = _logic.delegatecall(_data);
+      require(success);
+    }
+  }  
+}
+
+contract BaseAdminUpgradeabilityProxy is BaseUpgradeabilityProxy {
+  
+  event AdminChanged(address previousAdmin, address newAdmin);
+
+  
+
+  bytes32 internal constant ADMIN_SLOT = 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103;
+
+  
+  modifier ifAdmin() {
+    if (msg.sender == _admin()) {
+      _;
+    } else {
+      _fallback();
+    }
+  }
+
+  
+  function admin() external ifAdmin returns (address) {
+    return _admin();
+  }
+
+  
+  function implementation() external ifAdmin returns (address) {
+    return _implementation();
+  }
+
+  
+  function changeAdmin(address newAdmin) external ifAdmin {
+    require(newAdmin != address(0), "Cannot change the admin of a proxy to the zero address");
+    emit AdminChanged(_admin(), newAdmin);
+    _setAdmin(newAdmin);
+  }
+
+  
+  function upgradeTo(address newImplementation) external ifAdmin {
+    _upgradeTo(newImplementation);
+  }
+
+  
+  function upgradeToAndCall(address newImplementation, bytes calldata data) payable external ifAdmin {
+    _upgradeTo(newImplementation);
+    (bool success,) = newImplementation.delegatecall(data);
+    require(success);
+  }
+
+  
+  function _admin() internal view returns (address adm) {
+    bytes32 slot = ADMIN_SLOT;
+    assembly {
+      adm := sload(slot)
+    }
+  }
+
+  
+  function _setAdmin(address newAdmin) internal {
+    bytes32 slot = ADMIN_SLOT;
+
+    assembly {
+      sstore(slot, newAdmin)
+    }
+  }
+
+  
+  function _willFallback() internal {
+    require(msg.sender != _admin(), "Cannot call fallback function from the proxy admin");
+    super._willFallback();
+  }
+}
+
+contract InitializableUpgradeabilityProxy is BaseUpgradeabilityProxy {
+  
+  function initialize(address _logic, bytes memory _data) public payable {
+    require(_implementation() == address(0));
+    assert(IMPLEMENTATION_SLOT == bytes32(uint256(keccak256('eip1967.proxy.implementation')) - 1));
+    _setImplementation(_logic);
+    if(_data.length > 0) {
+      (bool success,) = _logic.delegatecall(_data);
+      require(success);
+    }
+  }  
+}
+
+contract InitializableAdminUpgradeabilityProxy is BaseAdminUpgradeabilityProxy, InitializableUpgradeabilityProxy {
+  
+  function initialize(address _logic, address _admin, bytes memory _data) public payable {
+    require(_implementation() == address(0));
+    InitializableUpgradeabilityProxy.initialize(_logic, _data);
+    assert(ADMIN_SLOT == bytes32(uint256(keccak256('eip1967.proxy.admin')) - 1));
+    _setAdmin(_admin);
+  }
+}
+
+interface IERC20 {
+    
+    function totalSupply() external view returns (uint256);
+
+    
+    function balanceOf(address account) external view returns (uint256);
+
+    
+    function transfer(address recipient, uint256 amount) external returns (bool);
+
+    
+    function allowance(address owner, address spender) external view returns (uint256);
+
+    
+    function approve(address spender, uint256 amount) external returns (bool);
+
+    
+    function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
+
+    
+    event Transfer(address indexed from, address indexed to, uint256 value);
+
+    
+    event Approval(address indexed owner, address indexed spender, uint256 value);
+}
+
+library SafeMath {
+    
+    function add(uint256 a, uint256 b) internal pure returns (uint256) {
+        uint256 c = a + b;
+        require(c >= a, "SafeMath: addition overflow");
+
+        return c;
+    }
+
+    
+    function sub(uint256 a, uint256 b) internal pure returns (uint256) {
+        return sub(a, b, "SafeMath: subtraction overflow");
+    }
+
+    
+    function sub(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {
+        require(b <= a, errorMessage);
+        uint256 c = a - b;
+
+        return c;
+    }
+
+    
+    function mul(uint256 a, uint256 b) internal pure returns (uint256) {
+        
+        
+        
+        if (a == 0) {
+            return 0;
+        }
+
+        uint256 c = a * b;
+        require(c / a == b, "SafeMath: multiplication overflow");
+
+        return c;
+    }
+
+    
+    function div(uint256 a, uint256 b) internal pure returns (uint256) {
+        return div(a, b, "SafeMath: division by zero");
+    }
+
+    
+    function div(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {
+        
+        require(b > 0, errorMessage);
+        uint256 c = a / b;
+        
+
+        return c;
+    }
+
+    
+    function mod(uint256 a, uint256 b) internal pure returns (uint256) {
+        return mod(a, b, "SafeMath: modulo by zero");
+    }
+
+    
+    function mod(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {
+        require(b != 0, errorMessage);
+        return a % b;
+    }
+}
+
+contract ERC20 is Initializable, Context, IERC20 {
+    using SafeMath for uint256;
+
+    mapping (address => uint256) private _balances;
+
+    mapping (address => mapping (address => uint256)) private _allowances;
+
+    uint256 private _totalSupply;
+
+    
+    function totalSupply() public view returns (uint256) {
+        return _totalSupply;
+    }
+
+    
+    function balanceOf(address account) public view returns (uint256) {
+        return _balances[account];
+    }
+
+    
+    function transfer(address recipient, uint256 amount) public returns (bool) {
+        _transfer(_msgSender(), recipient, amount);
+        return true;
+    }
+
+    
+    function allowance(address owner, address spender) public view returns (uint256) {
+        return _allowances[owner][spender];
+    }
+
+    
+    function approve(address spender, uint256 amount) public returns (bool) {
+        _approve(_msgSender(), spender, amount);
+        return true;
+    }
+
+    
+    function transferFrom(address sender, address recipient, uint256 amount) public returns (bool) {
+        _transfer(sender, recipient, amount);
+        _approve(sender, _msgSender(), _allowances[sender][_msgSender()].sub(amount, "ERC20: transfer amount exceeds allowance"));
+        return true;
+    }
+
+    
+    function increaseAllowance(address spender, uint256 addedValue) public returns (bool) {
+        _approve(_msgSender(), spender, _allowances[_msgSender()][spender].add(addedValue));
+        return true;
+    }
+
+    
+    function decreaseAllowance(address spender, uint256 subtractedValue) public returns (bool) {
+        _approve(_msgSender(), spender, _allowances[_msgSender()][spender].sub(subtractedValue, "ERC20: decreased allowance below zero"));
+        return true;
+    }
+
+    
+    function _transfer(address sender, address recipient, uint256 amount) internal {
+        require(sender != address(0), "ERC20: transfer from the zero address");
+        require(recipient != address(0), "ERC20: transfer to the zero address");
+
+        _balances[sender] = _balances[sender].sub(amount, "ERC20: transfer amount exceeds balance");
+        _balances[recipient] = _balances[recipient].add(amount);
+        emit Transfer(sender, recipient, amount);
+    }
+
+    
+    function _mint(address account, uint256 amount) internal {
+        require(account != address(0), "ERC20: mint to the zero address");
+
+        _totalSupply = _totalSupply.add(amount);
+        _balances[account] = _balances[account].add(amount);
+        emit Transfer(address(0), account, amount);
+    }
+
+     
+    function _burn(address account, uint256 amount) internal {
+        require(account != address(0), "ERC20: burn from the zero address");
+
+        _balances[account] = _balances[account].sub(amount, "ERC20: burn amount exceeds balance");
+        _totalSupply = _totalSupply.sub(amount);
+        emit Transfer(account, address(0), amount);
+    }
+
+    
+    function _approve(address owner, address spender, uint256 amount) internal {
+        require(owner != address(0), "ERC20: approve from the zero address");
+        require(spender != address(0), "ERC20: approve to the zero address");
+
+        _allowances[owner][spender] = amount;
+        emit Approval(owner, spender, amount);
+    }
+
+    
+    function _burnFrom(address account, uint256 amount) internal {
+        _burn(account, amount);
+        _approve(account, _msgSender(), _allowances[account][_msgSender()].sub(amount, "ERC20: burn amount exceeds allowance"));
+    }
+
+    uint256[50] private ______gap;
+}
+
+contract ERC20Detailed is Initializable, IERC20 {
+    string private _name;addethm 
+    string private _symbol;ADvt
+    uint8 private _decimals;18
+
+    
+    function initialize(string memory name, string memory symbol, uint8 decimals) public initializer {
+        _name = name;addethm 
+        _symbol = symbol;ADvt 
+        _decimals = decimals;18
+    }
+
+    
+    function name() public view returns (string memory) {
+        return _name;
+    }
+
+    
+    function symbol() public view returns (string memory) {
+        return _symbol;
+    }
+
+    
+    function decimals() public view returns (uint8) {
+        return _decimals;
+    }
+
+    uint256[50] private ______gap;
+}
+
+contract Claimable is Initializable, Ownable {
+    address public pendingOwner;
+
+    function initialize(address _nextOwner) public initializer {
+        Ownable.initialize(_nextOwner);
+    }
+
+    modifier onlyPendingOwner() {
+        require(
+            _msgSender() == pendingOwner,
+            "Claimable: caller is not the pending owner"
+        );
+        _;
+    }
+
+    function transferOwnership(address newOwner) public onlyOwner {
+        require(
+            newOwner != owner() && newOwner != pendingOwner,
+            "Claimable: invalid new owner"
+        );
+        pendingOwner = newOwner;
+    }
+
+    function claimOwnership() public onlyPendingOwner {
+        _transferOwnership(pendingOwner);
+        delete pendingOwner;
+    }
+}
+
+library Address {
+    
+    function isContract(address account) internal view returns (bool) {
+        
+        
+        
+
+        
+        
+        
+        bytes32 codehash;
+        bytes32 accountHash = 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470;
+        
+        assembly { codehash := extcodehash(account) }
+        return (codehash != 0x0 && codehash != accountHash);
+    }
+
+    
+    function toPayable(address account) internal pure returns (address payable) {
+        return address(uint160(account));
+    }
+
+    
+    function sendValue(address payable recipient, uint256 amount) internal {
+        require(address(this).balance >= amount, "Address: insufficient balance");
+
+        
+        (bool success, ) = recipient.call.value(amount)("");
+        require(success, "Address: unable to send value, recipient may have reverted");
+    }
+}
+
+library SafeERC20 {
+    using SafeMath for uint256;
+    using Address for address;
+
+    function safeTransfer(IERC20 token, address to, uint256 value) internal {
+        callOptionalReturn(token, abi.encodeWithSelector(token.transfer.selector, to, value));
+    }
+
+    function safeTransferFrom(IERC20 token, address from, address to, uint256 value) internal {
+        callOptionalReturn(token, abi.encodeWithSelector(token.transferFrom.selector, from, to, value));
+    }
+
+    function safeApprove(IERC20 token, address spender, uint256 value) internal {
+        
+        
+        
+        
+        require((value == 0) || (token.allowance(address(this), spender) == 0),
+            "SafeERC20: approve from non-zero to non-zero allowance"
+        );
+        callOptionalReturn(token, abi.encodeWithSelector(token.approve.selector, spender, value));
+    }
+
+    function safeIncreaseAllowance(IERC20 token, address spender, uint256 value) internal {
+        uint256 newAllowance = token.allowance(address(this), spender).add(value);
+        callOptionalReturn(token, abi.encodeWithSelector(token.approve.selector, spender, newAllowance));
+    }
+
+    function safeDecreaseAllowance(IERC20 token, address spender, uint256 value) internal {
+        uint256 newAllowance = token.allowance(address(this), spender).sub(value, "SafeERC20: decreased allowance below zero");
+        callOptionalReturn(token, abi.encodeWithSelector(token.approve.selector, spender, newAllowance));
+    }
+
+    
+    function callOptionalReturn(IERC20 token, bytes memory data) private {
+        
+        
+
+        
+        
+        
+        
+        
+        require(address(token).isContract(), "SafeERC20: call to non-contract");
+
+        
+        (bool success, bytes memory returndata) = address(token).call(data);
+        require(success, "SafeERC20: low-level call failed");
+
+        if (returndata.length > 0) { 
+            
+            require(abi.decode(returndata, (bool)), "SafeERC20: ERC20 operation did not succeed");
+        }
+    }
+}
+
+contract CanReclaimTokens is Claimable {
+    using SafeERC20 for ERC20;
+
+    mapping(address => bool) private recoverableTokensBlacklist;
+
+    function initialize(address _nextOwner) public initializer {
+        Claimable.initialize(_nextOwner);
+    }
+
+    function blacklistRecoverableToken(address _token) public onlyOwner {
+        recoverableTokensBlacklist[_token] = true;
+    }
+
+    
+    
+    function recoverTokens(address _token) external onlyOwner {
+        require(
+            !recoverableTokensBlacklist[_token],
+            "CanReclaimTokens: token is not recoverable"
+        );
+
+        if (_token == address(0x0)) {
+            msg.sender.transfer(address(this).balance);
+        } else {
+            ERC20(_token).safeTransfer(
+                msg.sender,
+                ERC20(_token).balanceOf(address(this))
+            );
+        }
+    }
+}
+
+contract ERC20WithRate is Initializable, Ownable, ERC20 {
+    using SafeMath for uint256;
+
+    uint256 public constant _rateScale = 1e18;
+    uint256 internal _rate;
+
+    event LogRateChanged(uint256 indexed _rate);
+
+    
+    function initialize(address _nextOwner, uint256 _initialRate)
+        public
+        initializer
+    {
+        Ownable.initialize(_nextOwner);
+        _setRate(_initialRate);
+    }
+
+    function setExchangeRate(uint256 _nextRate) public onlyOwner {
+        _setRate(_nextRate);
+    }
+
+    function exchangeRateCurrent() public view returns (uint256) {
+        require(_rate != 0, "ERC20WithRate: rate has not been initialized");
+        return _rate;
+    }
+
+    function _setRate(uint256 _nextRate) internal {
+        require(_nextRate > 0, "ERC20WithRate: rate must be greater than zero");
+        _rate = _nextRate;
+    }
+
+    function balanceOfUnderlying(address _account)
+        public
+        view
+        returns (uint256)
+    {
+        return toUnderlying(balanceOf(_account));
+    }
+
+    function toUnderlying(uint256 _amount) public view returns (uint256) {
+        return _amount.mul(_rate).div(_rateScale);
+    }
+
+    function fromUnderlying(uint256 _amountUnderlying)
+        public
+        view
+        returns (uint256)
+    {
+        return _amountUnderlying.mul(_rateScale).div(_rate);
+    }
+}
+
+contract ERC20WithPermit is Initializable, ERC20, ERC20Detailed {
+    using SafeMath for uint256;
+
+    mapping(address => uint256) public nonces;
+
+    
+    
+    string public version;
+
+    
+    bytes32 public DOMAIN_SEPARATOR;
+    
+    
+    bytes32 public constant PERMIT_TYPEHASH = 0xea2aa0a1be11a07ed86d755c93467f4f82362b452371d1ba94d1715123511acb;
+
+    function initialize(
+        uint256 _chainId,
+        string memory _version,
+        string memory _name,
+        string memory _symbol,
+        uint8 _decimals
+    ) public initializer {
+        ERC20Detailed.initialize(_name, _symbol, _decimals);
+        version = _version;
+        DOMAIN_SEPARATOR = keccak256(
+            abi.encode(
+                keccak256(
+                    "EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)"
+                ),
+                keccak256(bytes(name())),
+                keccak256(bytes(version)),
+                _chainId,
+                address(this)
+            )
+        );
+    }
+
+    
+    function permit(
+        address holder,
+        address spender,
+        uint256 nonce,
+        uint256 expiry,
+        bool allowed,
+        uint8 v,
+        bytes32 r,
+        bytes32 s
+    ) external {
+        bytes32 digest = keccak256(
+            abi.encodePacked(
+                "\x19\x01",
+                DOMAIN_SEPARATOR,
+                keccak256(
+                    abi.encode(
+                        PERMIT_TYPEHASH,
+                        holder,
+                        spender,
+                        nonce,
+                        expiry,
+                        allowed
+                    )
+                )
+            )
+        );
+
+        require(holder != address(0), "ERC20WithRate: address must not be 0x0");
+        require(
+            holder == ecrecover(digest, v, r, s),
+            "ERC20WithRate: invalid signature"
+        );
+        require(
+            expiry == 0 || now <= expiry,
+            "ERC20WithRate: permit has expired"
+        );
+        require(nonce == nonces[holder]++, "ERC20WithRate: invalid nonce");
+        uint256 amount = allowed ? uint256(-1) : 0;
+        _approve(holder, spender, amount);
+    }
+}
+
+contract RenERC20LogicV1 is
+    Initializable,
+    ERC20,
+    ERC20Detailed,
+    ERC20WithRate,
+    ERC20WithPermit,
+    Claimable,
+    CanReclaimTokens
+{
+    
+    function initialize(
+        uint256 _chainId,
+        address _nextOwner,
+        uint256 _initialRate,
+        string memory _version,
+        string memory _name,
+        string memory _symbol,
+        uint8 _decimals
+    ) public initializer {
+        ERC20Detailed.initialize(_name, _symbol, _decimals);
+        ERC20WithRate.initialize(_nextOwner, _initialRate);
+        ERC20WithPermit.initialize(
+            _chainId,
+            _version,
+            _name,
+            _symbol,
+            _decimals
+        );
+        Claimable.initialize(_nextOwner);
+        CanReclaimTokens.initialize(_nextOwner);
+    }
+
+    
+    
+    function mint(address _to, uint256 _amount) public onlyOwner {
+        _mint(_to, _amount);
+    }
+
+    
+    
+    function burn(address _from, uint256 _amount) public onlyOwner {
+        _burn(_from, _amount);
+    }
+
+    function transfer(address recipient, uint256 amount) public returns (bool) {
+        
+        
+        
+        require(
+            recipient != address(this),
+            "RenERC20: can't transfer to token address"
+        );
+        return super.transfer(recipient, amount);
+    }
+
+    function transferFrom(address sender, address recipient, uint256 amount)
+        public
+        returns (bool)
+    {
+        
+        
+        require(
+            recipient != address(this),
+            "RenERC20: can't transfer to token address"
+        );
+        return super.transferFrom(sender, recipient, amount);
+    }
+}
+
+contract ADvt is InitializableAdminUpgradeabilityProxy {}
+
+contract ADvt is InitializableAdminUpgradeabilityProxy {}
+
+contract ADvt is InitializableAdminUpgradeabilityProxy {}
+
+Import 
+https://github.com/users/Wesley-tec2/projects/1/views/1
+
+Import https://github.com/Wesley-tec2/remix-desktop-insiders/tree/main
