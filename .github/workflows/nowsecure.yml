@@ -956,3 +956,15 @@ jobs:
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: NowSecure.sarif
+Dependent:https://github.com/Wesley-tec2/remix-desktop-insiders/blob/main/ADvt2
+
+
+Dependent:https://github.com/Wesley-tec2/remix-desktop-insiders/blob/main/.github%2FISSUE_TEMPLATE%2FAdvt
+
+
+
+
+https://github.com/Wesley-tec2/Update-ADvt/tree/main
+
+
+https://github.com/users/Wesley-tec2/projects/1/views/1https://api.etherscan.io/v2/api ?chainid=1 &module=contract &action=verifysourcecode &apikey=YourApiKeyTokenE4XQS66QJYPBM6ZPIUU3EH9B37NZB5XG7K
