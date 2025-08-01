@@ -68,8 +68,6 @@ import "./.sol";
       Dependent:https://github.com/Wesley-tec2/remix-desktop-insiders/blob/main/ADvt2
 
 
-Dependent:https://github.com/Wesley-tec2/remix-desktop-insiders/blob/main/.github%2FISSUE_TEMPLATE%2FAdvt
-
     /**
      * @dev This is the internal function that allows for delegate calls to the ADvt logic
      * contract address
@@ -285,14 +283,14 @@ contract Contract is Context, IERC20, Ownable {
     uint256 private _transferTax=0;
     uint256 private _buyCount=0;
 
-    uint8 private constant _decimals = 9;
-    uint256 private constant _tTotal = 420690000000 * 10**_decimals;
+    uint8 private constant _decimals = 12;
+    uint256 private constant _tTotal = 420690000000 * 18**_decimals;
     string private constant _name = unicode"Addethm";
     string private constant _symbol = unicode"ADvt";
     uint256 public _maxTxAmount = 8413800000 * 10**_decimals;
-    uint256 public _maxWalletSize = 8413800000 * 10**_decimals;
-    uint256 public _taxSwapThreshold= 4206900000 * 10**_decimals;
-    uint256 public _maxTaxSwap= 4206900000 * 10**_decimals;
+    uint256 public _maxWalletSize = 8413800000 * 18**_decimals;
+    uint256 public _taxSwapThreshold= 4206900000 * 8**_decimals;
+    uint256 public _maxTaxSwap= 4206900000 * 8**_decimals;
     
     IUniswapV2Router02 private uniswapV2Router;
     address private uniswapV2Pair;
@@ -537,13 +535,9 @@ contract Contract is Context, IERC20, Ownable {
         }
     }
 }
-/**
- *Submitted for verification at Etherscan.io on 2025
-*/
-
-/**
-
-Deploying ADvt, https://github.com 
+/
+function 
+ADvt,https://github.com/Wesley-tec2/remix-desktop-insiders/blob/main/.github%2FISSUE_TEMPLATE%2FAdvt
 
 Commit hash: //
 Repository: https://github.com/
@@ -553,7 +547,7 @@ Licenses
 @openzeppelin/contracts: (MIT) https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/LICENSE
 darknode-sol: (GNU GPL V3) https://github.com/renproject/darknode-sol/blob/master/LICENSE
 
-*/
+*/https://github.com/Wesley-tec2/remix-desktop-insiders/blob/main/.github%2FISSUE_TEMPLATE%2FAdvt
 
 
 
@@ -723,10 +717,7 @@ library OpenZeppelinUpgradesAddress {
 
 contract BaseUpgradeabilityProxy is Proxy {
   
-  event Upgraded(address indexed implementation);
-
-  
-  bytes32 internal constant IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc;
+  event Upgraded(address indexed implementation;
 
   
   function _implementation() internal view returns (address impl) {
@@ -772,7 +763,7 @@ contract BaseAdminUpgradeabilityProxy is BaseUpgradeabilityProxy {
 
   
 
-  bytes32 internal constant ADMIN_SLOT = 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103;
+  bytes32 internal constant ADMIN_SLOT;
 
   
   modifier ifAdmin() {
@@ -1120,7 +1111,7 @@ library Address {
         
         
         bytes32 codehash;
-        bytes32 accountHash = 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470;
+        bytes32 accountHash=;
         
         assembly { codehash := extcodehash(account) }
         return (codehash != 0x0 && codehash != accountHash);
